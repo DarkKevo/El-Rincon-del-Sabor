@@ -1,0 +1,478 @@
+/*Font Import*/
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Nova+Flat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container {
+    /* overflow: hidden; */
+    min-width: 375px;
+    min-height: 800px;
+    display: grid;
+    min-width: 375px;
+    width: 100%;
+    max-width: 100%;
+    grid-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+        'header header'
+        'banner-slider banner-slider'
+        'login login'
+        'about about'
+        'platillo platillo';
+}
+
+body {
+    font-family: 'Nova Flat', cursive;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+    position: fixed;
+    z-index: 100;
+}
+
+nav.sticky {
+    height: 80px;
+    background-color: #dfda9c;
+}
+
+nav {
+    margin-top: 3rem;
+    height: 100px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 120px;
+    background-color: #eeedde;
+    transition: all 0.3s;
+}
+
+nav img {
+    width: 160px;
+    height: auto;
+    margin-left: 4rem;
+}
+
+.bar-btn {
+    margin-right: 4rem;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-menu {
+    border-radius: 50px;
+    position: fixed;
+    width: 95%;
+    height: 0vh;
+    top: 11rem;
+    background-color: #eeedde;
+    text-align: center;
+    transition: all.5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all 0.5s;
+}
+
+.nav-menu li a {
+    color: rgba(0, 0, 0, 0.356);
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.nav-menu li a:hover {
+    color: rgba(0, 0, 0, 0.664);
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+/*Banner Slider*/
+
+/*Slide 1*/
+
+.banner-slider {
+    grid-area: banner-slider;
+    width: 100%;
+    height: 57rem;
+    display: flex;
+    width: 200%;
+    transition: all 0.5s;
+}
+
+.slide1-banner,
+.slide2-banner,
+.slide1-chef,
+.slide3-cliente {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slide1-banner {
+    background-image: url('/img/banner_d.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.slide1-banner .texto-slide1 {
+    color: white;
+    font-size: 65px;
+    width: 50%;
+}
+
+.boton-sh {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.a-sh:hover {
+    background-color: #e0ddaa;
+}
+
+.a-sh {
+    color: black;
+    font-size: 35px;
+    border-radius: 100px;
+    padding: 40px 60px;
+    margin-bottom: 7rem;
+    background-color: #eeedde;
+    transition: 0.5s;
+}
+
+.slide1-banner p {
+    margin-top: 2rem;
+}
+
+/*Slide 2*/
+
+.slide2-banner {
+    background-image: url('/img/form_banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-banner-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    text-align: center;
+    background-color: #e0ddaa;
+    padding: 50px 0px;
+    margin-top: 6rem;
+    border-radius: 90px;
+}
+
+.form-banner h2 {
+    font-size: 50px;
+    margin-bottom: 2rem;
+}
+
+.form-banner input {
+    text-align: center;
+    width: 70%;
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 50px;
+}
+
+.form-banner button {
+    width: 70%;
+    padding: 20px 0px;
+    border-radius: 50px;
+    border: none;
+    font-size: 25px;
+    background-color: #cac57e;
+}
+
+/*Seccion de Inicios de Sesion*/
+
+.login {
+    grid-area: login;
+    width: 100%;
+    height: 57rem;
+    display: flex;
+    width: 300%;
+    transition: all 0.5s;
+    margin-left: -100%;
+}
+
+.slide1-chef {
+    background-image: url('/img/chefs_login.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.login .form-banner button {
+    margin-bottom: 2rem;
+}
+
+.login .form-banner p {
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+
+.slide2-menu {
+    display: flex;
+    width: 100%;
+    height: 57rem;
+}
+
+.Chefs,
+.Clientes {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Chefs p,
+.Clientes p {
+    width: 40%;
+    font-size: 50px;
+    padding: 20px 0;
+    border: 2px solid #ffffff;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.Chefs p:hover,
+.Clientes p:hover {
+    background-color: #ffffff6c;
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.Chefs {
+    background-image: url('/img/administradores.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.Clientes {
+    background-image: url('/img/clientes.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.slide3-cliente {
+    flex-direction: row-reverse;
+    background-image: url('/img/clientes_login.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/*Seccion About*/ 
+
+.about-me {
+    grid-area: about;
+    height: 57rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #eeedde;
+}
+
+.about1 , .about2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-about {
+    width: 50%;
+}
+
+.texto-about1 {
+    width: 50%;
+    font-size: 50px;
+    padding: 40px;
+    align-self: center;
+}
+
+.texto-about2 {
+    width: 50%;
+    font-size: 50px;
+    padding: 40px;
+    align-self: center;
+    text-align: right;
+}
+
+#about_img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Seccion de PLatillos Destacados*/
+
+.platillos {
+    height: 57rem;
+    width: 100%;
+    grid-area: platillo;
+    background-image: url('/img/parrilla.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.platillos-content {
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.platillos-content h2 {
+    color: white;
+    font-size: 60px;
+}
+
+.line {
+    margin: 1rem 0;
+    width: 550px;
+    height: 10px;
+    background-color: #e0ddaa;
+    border-radius: 20px;
+}
+
+.carrusel-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 68%;
+    overflow: hidden;
+}
+
+.carrusel {
+    width: 510%;
+    display: flex;
+    margin-left: -102.9%;
+}
+
+.item-c {
+    width: 100%;
+    height: 30rem;
+    background-color: #eeedde;
+    margin: 0 1%;
+    padding: 35px;
+    border-radius: 50px;
+}
+
+.item-c h3 {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 40px;
+}
+
+.img-contenedor {
+    height: 22rem;
+    width: 100%;
+}
+
+.img-contenedor img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.flecha-iz,
+.flecha-de {
+    font-size: 60px;
+    padding: 120px 40px;
+    background-color: #eeedde;
+    position: absolute;
+    border-radius: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.flecha-iz {
+    left: 90px;
+    bottom: 80px;
+}
+
+.flecha-de {
+    right: 90px;
+    bottom: 80px;
+}
+
+.flecha-de:hover, .flecha-iz:hover {
+    background-color: #cac57e;
+}
+
+/*Responsive del Navbar Hamburguesa*/
+
+@media screen and (min-width: 1025px) {
+    nav img {
+        margin-left: 2rem;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        transition: none;
+        text-align: right;
+        margin-right: 4rem;
+        height: 50px;
+        background-color: inherit;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 0;
+        margin: 0px 15px;
+        transition: none;
+    }
+
+    nav img {
+        margin-left: 4rem;
+    }
+
+    .nav-menu li a {
+        font-size: 20px;
+    }
+}
