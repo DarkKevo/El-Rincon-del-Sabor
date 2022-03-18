@@ -118,12 +118,12 @@ $(document).ready(function () {
             nombre: $('#nombre-chef-r').val(),
             correo: $('#correo-chef-r').val(),
             clave: $('#clave-chef-r').val(),
-            serial: $('#serial-chef-r').val()
+            serial: $('#serial-chef-r').val(),
         };
 
         $.post('addadmin.php', PostData, function (response) {
             console.log(response);
-            alert(response)
+            alert(response);
             $('#form-register-chef').trigger('reset');
         });
 
@@ -140,9 +140,41 @@ $(document).ready(function () {
 
         $.post('addcliente.php', PostData, function (response) {
             console.log(response);
-            console.log(PostData)
-            alert(response)
+            console.log(PostData);
+            alert(response);
             $('#form-registrar-cliente').trigger('reset');
+        });
+
+        e.preventDefault();
+    });
+    //Inicio de Sesion de Admin
+    $('#form-login-chef').submit(function (e) {
+        const PostData = {
+            nombre: $('#nombre-chef').val(),
+            clave: $('#pass-chef').val(),
+        };
+
+        $.post('verificar_adm.php', PostData, function (response) {
+            console.log(response);
+            console.log(PostData);
+            alert(response);
+            $('#form-login-chef').trigger('reset');
+        });
+
+        e.preventDefault();
+    });
+    //Inicio de Sesion de Cliente
+    $('#form-login-cliente').submit(function (e) {
+        const PostData = {
+            nombre: $('#nombre-cliente').val(),
+            clave: $('#pass-cliente').val(),
+        };
+
+        $.post('verificar_cliente.php', PostData, function (response) {
+            console.log(response);
+            console.log(PostData);
+            alert(response);
+            $('#form-login-cliente').trigger('reset');
         });
 
         e.preventDefault();
@@ -184,4 +216,3 @@ $(document).ready(function () {
 });
 
 //Fin de Controladores de animación de Formularios
-
