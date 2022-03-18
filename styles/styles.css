@@ -140,7 +140,7 @@ nav img {
 }
 
 .slide1-banner {
-    background-image: url('/img/banner_d.jpg');
+    background-image: url('../img/banner_d.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -180,7 +180,7 @@ nav img {
 /*Slide 2*/
 
 .slide2-banner {
-    background-image: url('/img/form_banner.jpg');
+    background-image: url('../img/form_banner.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -235,7 +235,7 @@ nav img {
 }
 
 .slide1-chef {
-    background-image: url('/img/chefs_login.jpg');
+    background-image: url('../img/chefs_login.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -282,20 +282,20 @@ nav img {
 }
 
 .Chefs {
-    background-image: url('/img/administradores.jpg');
+    background-image: url('../img/administradores.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .Clientes {
-    background-image: url('/img/clientes.jpg');
+    background-image: url('../img/clientes.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .slide3-cliente {
     flex-direction: row-reverse;
-    background-image: url('/img/clientes_login.jpg');
+    background-image: url('../img/clientes_login.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -348,7 +348,7 @@ nav img {
     height: 57rem;
     width: 100%;
     grid-area: platillo;
-    background-image: url('/img/parrilla.jpg');
+    background-image: url('../img/parrilla.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -493,7 +493,7 @@ nav img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url('/img/opiniones.jpg');
+    background-image: url('../img/opiniones.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -591,6 +591,15 @@ footer {
     background-color: #304c57;
     color: rgba(255, 255, 255, 0.747);
     font-size: 14px;
+}
+
+.blue {
+    color: blue;
+    cursor: pointer;
+}
+
+#form-register-chef, #form-registrar-cliente {
+    display: none;
 }
 
 /*Responsive del Navbar Hamburguesa*/
