@@ -1,0 +1,149 @@
+/*Font Import*/
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Nova+Flat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 52rem;
+    font-family: 'Nova Flat', cursive;
+}
+
+header {
+    background-color: #e0ddaa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav img {
+    width: 12%;
+    margin-left: 5rem;
+}
+
+nav a {
+    margin-right: 5rem;
+    padding: 20px 40px;
+    border-radius: 50px;
+    color: black;
+    background-color: #EEEDDE;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    background-color: #c7c49c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav h2 {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.cliente-content {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/reservaciones.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.253);
+    padding: 3rem 0;
+    box-shadow: 0px 2px 10px #00000050;
+    border-radius: 50px;
+}
+
+.form-container h2 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 100;
+}
+
+label {
+    font-size: 25px;
+    margin-right: 20px;
+    color: white;
+}
+
+#form-reservacion input {
+    padding: 20px 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 100px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-right: 3rem;
+}
+
+#form-reservacion button {
+    border: 2px solid white;
+    font-size: 25px;
+    padding: 20px 30px;
+    background-color: transparent;
+    border-radius: 100px;
+    color: white;
+    transition: 0.5s;
+}
+
+#form-reservacion button:hover {
+    background-color: rgba(255, 255, 255, 0.322);
+}
+
+.tabla-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.253);
+    padding: 30px;
+    margin-top: 4rem;
+    border-radius: 50px;
+}
+
+.tabla-cliente {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    color: white;
+}
+
+th,td {
+    width: 20%;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    padding: 10px;
+}
+
+th {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+td {
+    font-size: 25px;
+}
+

@@ -4,10 +4,6 @@
     $user = 'root';
 
     $conexion = new mysqli($local, $user, '');
-    
-    if ($conexion){
-        echo 'Datos Conectados';
-    }
 
     if ($conexion -> connect_error) {
         die('Failed Connection');
@@ -28,6 +24,8 @@
 
         $create3 = "CREATE TABLE `rincon_sabor`.`admins_data` ( `nombre` VARCHAR(100) NOT NULL ,  `correo` VARCHAR(100) NOT NULL ,  `clave` VARCHAR(150) NOT NULL ,  `id` INT NOT NULL AUTO_INCREMENT ,    PRIMARY KEY  (`id`)) ENGINE = InnoDB;";
 
+        $create4 = "CREATE TABLE `rincon_sabor`.`reservaciones` ( `Numero de Personas` INT NOT NULL , `Fecha_Hora` DATETIME NOT NULL , `usuario` VARCHAR(100) NOT NULL , `id` INT NOT NULL AUTO_INCREMENT , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+
         if ($conexion -> query($create) != TRUE) {
             echo 'Failed Creation ' .$conexion -> error;
         }
@@ -39,6 +37,11 @@
         if ($conexion -> query($create3) != TRUE) {
             echo 'Failed Creation ' .$conexion -> error;
         }
+
+        if ($conexion -> query($create4) != TRUE) {
+            echo 'Failed Creation ' .$conexion -> error;
+        }
+
     } else {
         echo 'I have a Problem Here...' .$conexion -> error;
     }

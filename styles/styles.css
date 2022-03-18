@@ -23,11 +23,11 @@
     grid-template-areas:
         'header header'
         'banner-slider banner-slider'
-        'login login'
         'about about'
         'platillo platillo'
         'delivery delivery'
         'clientes clientes'
+        'login login'
         'footer footer';
 }
 

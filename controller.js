@@ -156,8 +156,6 @@ $(document).ready(function () {
 
         $.post('verificar_adm.php', PostData, function (response) {
             console.log(response);
-            console.log(PostData);
-            alert(response);
             $('#form-login-chef').trigger('reset');
         });
 
@@ -171,9 +169,11 @@ $(document).ready(function () {
         };
 
         $.post('verificar_cliente.php', PostData, function (response) {
-            console.log(response);
-            console.log(PostData);
-            alert(response);
+            if (response == 'true') {
+                $(location).attr('href', 'cliente.php')
+            } else {
+                alert('Usuario / Contraseña Invalidos')
+            }
             $('#form-login-cliente').trigger('reset');
         });
 
@@ -216,3 +216,30 @@ $(document).ready(function () {
 });
 
 //Fin de Controladores de animación de Formularios
+
+//Controlador de Scrolls
+
+document.addEventListener('click', function (event) {
+    if (!event.target.matches('.btn-scroll-view')) return;
+
+    event.preventDefault();
+
+    const element = document.getElementById(event.target.dataset.target);
+
+    element.scrollIntoView({ behavior: 'smooth' });
+});
+
+//Fin de Controlador de Scrolls
+
+//Controlador Del Slide Form 
+
+$(document).ready(function () {
+    $('#ordenar-boton').click(function(){
+        $('#login').slideDown()
+    })
+});
+
+//Fin del Controlador del Slide Form
+
+//Controlador de Vista y Formulario de Cliente (Sesion)
+

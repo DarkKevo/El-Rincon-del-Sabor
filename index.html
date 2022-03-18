@@ -23,15 +23,51 @@
                         <i class="fa-solid fa-bars"></i>
                     </label>
                     <ul class="nav-menu">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">¿Quienes Somos?</a></li>
-                        <li><a href="#">Platillos Destacados</a></li>
-                        <li><a href="#">Clientes</a></li>
-                        <li><a href="#">Ordenar</a></li>
+                        <li>
+                            <a
+                                class="btn-scroll-view"
+                                data-target="banner-slider"
+                                href="#"
+                                >Inicio</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="btn-scroll-view"
+                                href="#"
+                                data-target="about1"
+                                >¿Quienes Somos?</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="btn-scroll-view"
+                                href="#"
+                                data-target="platillos"
+                                >Platillos Destacados</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="btn-scroll-view"
+                                href="#"
+                                data-target="clientes"
+                                >Clientes</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="btn-scroll-view"
+                                id="ordenar-boton"
+                                href="#"
+                                data-target="login"
+                                >Ordenar</a
+                            >
+                        </li>
                     </ul>
                 </nav>
             </header>
-            <section class="banner-slider">
+            <section class="banner-slider" id="banner-slider">
                 <div class="slide1-banner">
                     <div class="texto-slide1">
                         <p>
@@ -90,7 +126,113 @@
                     </div>
                 </div>
             </section>
-            <section class="login">
+            <section class="about-me">
+                <div class="about1" id="about1">
+                    <div class="img-about">
+                        <img src="img/about_1.jpg" id="about_img" alt="" />
+                    </div>
+                    <div class="texto-about1">
+                        <p>
+                            Luego de 30 años, en el
+                            <strong>Rincon del Sabor</strong>
+                            seguimos siendo un lugar de exquisitez creado para
+                            complacerte
+                        </p>
+                    </div>
+                </div>
+                <div class="about2">
+                    <div class="texto-about2">
+                        <p>
+                            Nuestra Cocina forma parte de la cultura y el dia a
+                            dia de nuestros comensales.
+                        </p>
+                        <p>Edwar Smith</p>
+                        <p>Sub-Chef</p>
+                    </div>
+                    <div class="img-about">
+                        <img src="img/about_2.jpg" alt="" id="about_img" />
+                    </div>
+                </div>
+            </section>
+            <section class="platillos" id="platillos">
+                <div class="platillos-content">
+                    <h2>Lo Mejor de la Casa</h2>
+                    <div class="line"></div>
+                    <div class="carrusel-container">
+                        <div class="carrusel">
+                            <div class="item-c">
+                                <div class="img-contenedor">
+                                    <img src="img/plato1.jpg" alt="" />
+                                </div>
+                                <h3>Canelone de Pan</h3>
+                            </div>
+                            <div class="item-c">
+                                <div class="img-contenedor">
+                                    <img src="img/plato2.jpg" alt="" />
+                                </div>
+                                <h3>Arroz - Vegano</h3>
+                            </div>
+                            <div class="item-c">
+                                <div class="img-contenedor">
+                                    <img src="img/plato3.jpg" alt="" />
+                                </div>
+                                <h3>Sushi - Arroz</h3>
+                            </div>
+                            <div class="item-c">
+                                <div class="img-contenedor">
+                                    <img src="img/plato4.jpg" alt="" />
+                                </div>
+                                <h3>Paella con Arroz</h3>
+                            </div>
+                            <div class="item-c">
+                                <div class="img-contenedor">
+                                    <img src="img/plato5.jpg" alt="" />
+                                </div>
+                                <h3>Picado de Pulpo</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="flecha-iz"><</p>
+                    <p class="flecha-de">></p>
+                </div>
+            </section>
+            <section class="delivery">
+                <div class="img-delivery">
+                    <img src="img/delivery.JPG" />
+                </div>
+                <div class="delivery-text">
+                    <h2>Delivery</h2>
+                    <div class="line2"></div>
+                    <p>
+                        En El Rincón del Sabor contamos con un excelente
+                        servicio de entrega inmediata
+                    </p>
+                </div>
+            </section>
+            <section class="clientes" id="clientes">
+                <div class="cliente">
+                    <div class="img-cliente">
+                        <img src="img/sara.JPG" class="redonda" />
+                    </div>
+                    <h2>Sara Dilmer</h2>
+                    <p>"Excelente atención al cliente y buena comida"</p>
+                </div>
+                <div class="cliente">
+                    <div class="img-cliente">
+                        <img src="img/hugh.JPG" class="redonda" />
+                    </div>
+                    <h2>Hugh Hackman</h2>
+                    <p>"Excelente lugar para estar co ntu familia"</p>
+                </div>
+                <div class="cliente">
+                    <div class="img-cliente">
+                        <img src="img/chayanne.jpg" class="redonda" />
+                    </div>
+                    <h2>Chayanne</h2>
+                    <p>"El sabor de la comida es exquisito"</p>
+                </div>
+            </section>
+            <section class="login" id="login">
                 <div class="slide1-chef">
                     <div class="boton-sh">
                         <p class="a-sh" id="boton-login">Go Back!</p>
@@ -259,112 +401,6 @@
                             </p>
                         </form>
                     </div>
-                </div>
-            </section>
-            <section class="about-me">
-                <div class="about1">
-                    <div class="img-about">
-                        <img src="img/about_1.jpg" id="about_img" alt="" />
-                    </div>
-                    <div class="texto-about1">
-                        <p>
-                            Luego de 30 años, en el
-                            <strong>Rincon del Sabor</strong>
-                            seguimos siendo un lugar de exquisitez creado para
-                            complacerte
-                        </p>
-                    </div>
-                </div>
-                <div class="about2">
-                    <div class="texto-about2">
-                        <p>
-                            Nuestra Cocina forma parte de la cultura y el dia a
-                            dia de nuestros comensales.
-                        </p>
-                        <p>Edwar Smith</p>
-                        <p>Sub-Chef</p>
-                    </div>
-                    <div class="img-about">
-                        <img src="img/about_2.jpg" alt="" id="about_img" />
-                    </div>
-                </div>
-            </section>
-            <section class="platillos">
-                <div class="platillos-content">
-                    <h2>Lo Mejor de la Casa</h2>
-                    <div class="line"></div>
-                    <div class="carrusel-container">
-                        <div class="carrusel">
-                            <div class="item-c">
-                                <div class="img-contenedor">
-                                    <img src="img/plato1.jpg" alt="" />
-                                </div>
-                                <h3>Canelone de Pan</h3>
-                            </div>
-                            <div class="item-c">
-                                <div class="img-contenedor">
-                                    <img src="img/plato2.jpg" alt="" />
-                                </div>
-                                <h3>Arroz - Vegano</h3>
-                            </div>
-                            <div class="item-c">
-                                <div class="img-contenedor">
-                                    <img src="img/plato3.jpg" alt="" />
-                                </div>
-                                <h3>Sushi - Arroz</h3>
-                            </div>
-                            <div class="item-c">
-                                <div class="img-contenedor">
-                                    <img src="img/plato4.jpg" alt="" />
-                                </div>
-                                <h3>Paella con Arroz</h3>
-                            </div>
-                            <div class="item-c">
-                                <div class="img-contenedor">
-                                    <img src="img/plato5.jpg" alt="" />
-                                </div>
-                                <h3>Picado de Pulpo</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="flecha-iz"><</p>
-                    <p class="flecha-de">></p>
-                </div>
-            </section>
-            <section class="delivery">
-                <div class="img-delivery">
-                    <img src="img/delivery.JPG" />
-                </div>
-                <div class="delivery-text">
-                    <h2>Delivery</h2>
-                    <div class="line2"></div>
-                    <p>
-                        En El Rincón del Sabor contamos con un excelente
-                        servicio de entrega inmediata
-                    </p>
-                </div>
-            </section>
-            <section class="clientes">
-                <div class="cliente">
-                    <div class="img-cliente">
-                        <img src="img/sara.JPG" class="redonda" />
-                    </div>
-                    <h2>Sara Dilmer</h2>
-                    <p>"Excelente atención al cliente y buena comida"</p>
-                </div>
-                <div class="cliente">
-                    <div class="img-cliente">
-                        <img src="img/hugh.JPG" class="redonda" />
-                    </div>
-                    <h2>Hugh Hackman</h2>
-                    <p>"Excelente lugar para estar co ntu familia"</p>
-                </div>
-                <div class="cliente">
-                    <div class="img-cliente">
-                        <img src="img/chayanne.jpg" class="redonda" />
-                    </div>
-                    <h2>Chayanne</h2>
-                    <p>"El sabor de la comida es exquisito"</p>
                 </div>
             </section>
             <footer>
