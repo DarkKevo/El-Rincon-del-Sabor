@@ -231,15 +231,5 @@ document.addEventListener('click', function (event) {
 
 //Fin de Controlador de Scrolls
 
-//Controlador Del Slide Form 
-
-$(document).ready(function () {
-    $('#ordenar-boton').click(function(){
-        $('#login').slideDown()
-    })
-});
-
-//Fin del Controlador del Slide Form
-
 //Controlador de Vista y Formulario de Cliente (Sesion)
 
