@@ -321,7 +321,28 @@ nav img {
 .img-about {
     width: 50%;
 }
-
+@keyframes transImg{
+    0%{
+        transform: translateX(-600px);
+    },
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes transImg2{
+    0%{
+        transform: translateX(600px);
+    },
+    100%{
+        transform: translateX(0);
+    }
+}
+.animateImg{
+    animation: transImg 2s;
+}
+.animateImg2{
+    animation:  transImg2 2s;
+}
 .texto-about1 {
     width: 50%;
     font-size: 50px;
