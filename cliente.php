@@ -19,6 +19,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/cliente.css" />
+        <script src="https://kit.fontawesome.com/e11594cd9f.js" crossorigin="anonymous"></script>
         <title>Your Account</title>
     </head>
     <body>
@@ -51,7 +52,9 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody id="reservaciones-tabla"></tbody>
+                    <tbody id="reservaciones-tabla">
+
+                    </tbody>
                 </table>
             </div>
         </section>
