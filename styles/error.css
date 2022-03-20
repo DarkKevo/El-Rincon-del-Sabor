@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Nova+Flat&display=swap');
+
+body {
+    font-family: 'Nova Flat', cursive;
+    color: white;
+    height: 57rem;
+    margin: auto;
+    background-image: url('../img/error.jpg');
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

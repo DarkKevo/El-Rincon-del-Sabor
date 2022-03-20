@@ -7,11 +7,9 @@
         'rincon_sabor'
     );
 
-    session_start();
 
-    $user = $_SESSION['usuario'];
-
-    $query = "SELECT * FROM reservaciones WHERE usuario = '$user'";
+    $id = $_POST['id'];
+    $query = "SELECT * FROM reservaciones WHERE id = '$id'";
 
     $resultado = mysqli_query($conexion, $query);
 
@@ -30,7 +28,7 @@
         );
     }
 
-    $json_string = json_encode($json);
+    $json_string = json_encode($json[0]);
 
     echo $json_string;
 

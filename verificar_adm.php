@@ -21,11 +21,11 @@
         $filas = mysqli_num_rows($resultado);
 
         if ($filas > 0) {
-            // session_start();
-            // $_SESSION['usuario'] = $nombre;
-            echo 'Teoricamente Iniciaste una Sesion';
+            session_start();
+            $_SESSION['usuario'] = $nombre;
+            echo 'true';
         } else {
-            echo 'Usuario - Clave Invalidos';
+            echo 'false';
         }
 
         mysqli_free_result($resultado);
