@@ -11,6 +11,16 @@ $(document).ready(function () {
             Listar_Reservaciones();
             console.log(response);
             $('#form-reservacion').trigger('reset');
+            $('.form-container').slideUp();
+            setTimeout(function () {
+                $('.verified').slideDown();
+            }, 600);
+            setTimeout(function () {
+                $('.verified').slideUp();
+            }, 2000);
+            setTimeout(function () {
+                $('.form-container').slideDown();
+            }, 2500);
         });
         e.preventDefault();
     });
@@ -19,10 +29,10 @@ $(document).ready(function () {
     $(document).on('click', '.delete', function () {
         let element = $(this)[0].parentElement.parentElement;
         let id = $(element).attr('r-id');
-        $.post('eliminar_reservacion.php', {id: id}, function(response) {
-            console.log(response)
-            Listar_Reservaciones()
-        })
+        $.post('eliminar_reservacion.php', { id: id }, function (response) {
+            console.log(response);
+            Listar_Reservaciones();
+        });
     });
 
     function Listar_Reservaciones() {

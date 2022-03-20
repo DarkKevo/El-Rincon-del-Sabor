@@ -155,7 +155,11 @@ $(document).ready(function () {
         };
 
         $.post('verificar_adm.php', PostData, function (response) {
-            console.log(response);
+            if (response == 'true') {
+                $(location).attr('href', 'administrador.php');
+            } else {
+                alert('Usuario / Contraseña Invalidos');
+            }
             $('#form-login-chef').trigger('reset');
         });
 
@@ -170,9 +174,9 @@ $(document).ready(function () {
 
         $.post('verificar_cliente.php', PostData, function (response) {
             if (response == 'true') {
-                $(location).attr('href', 'cliente.php')
+                $(location).attr('href', 'cliente.php');
             } else {
-                alert('Usuario / Contraseña Invalidos')
+                alert('Usuario / Contraseña Invalidos');
             }
             $('#form-login-cliente').trigger('reset');
         });
@@ -231,15 +235,4 @@ document.addEventListener('click', function (event) {
 
 //Fin de Controlador de Scrolls
 
-//Controlador Del Slide Form 
-
-$(document).ready(function () {
-    $('#ordenar-boton').click(function(){
-        $('#login').slideDown()
-    })
-});
-
-//Fin del Controlador del Slide Form
-
 //Controlador de Vista y Formulario de Cliente (Sesion)
-

@@ -11,7 +11,7 @@
 
     $user = $_SESSION['usuario'];
 
-    $query = "SELECT * FROM reservaciones WHERE usuario = '$user'";
+    $query = "SELECT * FROM reservaciones";
 
     $resultado = mysqli_query($conexion, $query);
 
